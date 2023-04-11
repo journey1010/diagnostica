@@ -1,0 +1,9 @@
+{
+    "routes" : 
+    [
+        {"method" : "GET", "pattern" : "/diagnostica/{ugel}/{distrito}", "handler" : "ugel@ugelDistrito"},
+        {"method" : "GET", "pattern" : "/diagnostica/{ugel}/all" , "handler" : "ugel@ugelAllDistrict"},
+        {"method" : "GET", "pattern" : "/diagnostica/ugel-all", "handler": "ugel@allUgel"},
+        {"method" : "GET", "pattern" : "/diagnostica/{ugel}/{distrito}/{colegio}", "handler" : "colegio@colegio"} 
+    ]
+}

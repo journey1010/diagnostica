@@ -1,0 +1,15 @@
+RewriteEngine On
+RewriteBase /
+
+# Redirigir todas las solicitudes a index.php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule ^(.*)$ index.php/$1 [L]
+
+Options -Indexes
+
+##Seguridad contra ataques xss y csrx
+Header always append X-Frame-Options SAMEORIGIN
+Header set X-XSS-Protection "1; mode=block"
+Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
