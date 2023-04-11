@@ -70,10 +70,9 @@ class Router {
         
     protected function SanitizeVar($var)
     {
-        $var = filter_var( $var, FILTER_SANITIZE_URL);
+        $var = urldecode($var);
         $var = htmlspecialchars($var, ENT_QUOTES);
-        $var = strtolower($var);
-        $var = preg_replace('/[^a-zA-Z0-9\/.=~-]/', '', $var);
+        $var = preg_replace('/[^a-zA-Z0-9 \/\.=_~Ññáéíóúü-]/u', ' ', $var);
         return $var;
     }
 

@@ -1,9 +1,11 @@
 {
     "routes" : 
     [
-        {"method" : "GET", "pattern" : "/diagnostica/{ugel}/{distrito}", "handler" : "ugel@ugelDistrito"},
-        {"method" : "GET", "pattern" : "/diagnostica/{ugel}/all" , "handler" : "ugel@ugelAllDistrict"},
+        {"method" : "GET", "pattern" : "/diagnostica/distrito/{distrito}", "handler" : "ugel@ugelDistrito"},
+        {"method" : "GET", "pattern" : "/diagnostica/all/{ugel}" , "handler" : "ugel@ugelAllDistrict"},
         {"method" : "GET", "pattern" : "/diagnostica/ugel-all", "handler": "ugel@allUgel"},
-        {"method" : "GET", "pattern" : "/diagnostica/{ugel}/{distrito}/{colegio}", "handler" : "colegio@colegio"} 
+        {"method" : "GET", "pattern" : "/diagnostica/colegio-ugel/{colegio}/{ugel}", "handler" : "colegio@colegio"},
+        {"method": "GET", "pattern" : "/diagnostica/distrito-list-per/{distrito}/{curso}/{nivel}", "handler" : "colegio@colegioListALL"},
+        {"method": "GET", "pattern" : "/diagnostica/distrito-list/{distrito}", "handler" : "colegio@colegioList"}
     ]
 }
