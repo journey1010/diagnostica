@@ -79,7 +79,7 @@ class colegio extends erroHandler_y_Sanitizevar{
             $conexion = new MySQLConnection();
             $sql = "SELECT codigo_local, nombre, nivel, cod_mod_ie, estado_evadiag FROM colegio";
             $params = '';
-            $stmt = $conexion->query($sql, $params, '', false);
+            $stmt = $conexion->query($sql, $params);
             $results = array();
             while ($row = $stmt->fetchAll) {
                 $results[] = $row;
