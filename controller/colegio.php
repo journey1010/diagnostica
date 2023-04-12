@@ -73,4 +73,25 @@ class colegio extends erroHandler_y_Sanitizevar{
         return;
     }
 
+    public function colegioDatos ()
+    {
+        try{
+            $conexion = new MySQLConnection();
+            $sql = "SELECT codigo_local, nombre, nivel, cod_mod_ie, estado_evadiag FROM colegio";
+            $params = '';
+            $stmt = $conexion->query($sql, $params, '', false);
+            $results = array();
+            while ($row = $stmt->fetchAll) {
+                $results[] = $row;
+            }
+            $json = json_encode($results);
+            print_r($json);
+        } catch (Throwable $e) {
+            $this->handlerError($e);
+            $respuesta = ['error' => 'servicio no disponible'];
+            print_r ($respuesta);
+            die;
+        }
+        return; 
+    }
 }
