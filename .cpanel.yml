@@ -1,5 +1,5 @@
 ---
   deployment:
     tasks:
-      - export DEPLOYPATH=/home/loretosistemas/public_html/api.diagnostica/
+      - export DEPLOYPATH=/home/loretosistemas/public_html/api.diagnostica
       - /bin/cp -avz --delete /home/loretosistemas/repositories/diagnostica/ $DEPLOYPATH
