@@ -1,0 +1,5 @@
+---
+  deployment:
+    tasks:
+      - export DEPLOYPATH=/home/loretosistemas/public_html/api.diagnostica/
+      - /bin/rsync -avz --delete repositories/diagnostica/ $DEPLOYPATH
