@@ -2,4 +2,6 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/loretosistemas/public_html/apidiagnostica/
-    - /bin/rsync -av  /home/loretosistemas/repositories/diagnostica/ $DEPLOYPATH
+    - cd /home/loretosistemas/repositories/diagnostica/
+    - git fetch
+    - git diff --name-only origin/main | xargs -I{} cp --parents {} $DEPLOYPATH
