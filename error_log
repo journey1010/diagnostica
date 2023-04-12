@@ -1,0 +1,2 @@
+[12-Apr-2023 07:10:20 UTC] PHP Warning:  Undefined property: PDOStatement::$fetchAll in /home/loretosistemas/public_html/apidiagnostica/controller/colegio.php on line 84
+[12-Apr-2023 07:10:55 UTC] PHP Warning:  Undefined property: PDOStatement::$fetchAll in /home/loretosistemas/public_html/apidiagnostica/controller/colegio.php on line 84

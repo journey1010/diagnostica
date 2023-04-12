@@ -12,8 +12,8 @@ class MySQLConnection {
     private function __construct() {
         $this->host = 'localhost' ; 
         $this->port = '3306';
-        $this->username= 'root';
-        $this->password='';
+        $this->username= 'loretosistemas';
+        $this->password='Xblg6h0W6e78';
         $this->db='loretosistemas_EvaDiag';
     }
     

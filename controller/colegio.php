@@ -73,15 +73,15 @@ class colegio extends erroHandler_y_Sanitizevar{
         return;
     }
 
-    public function colegioDatos ()
+    public function colegioDatos()
     {
         try{
-            $conexion = new MySQLConnection();
-            $sql = "SELECT codigo_local, nombre, nivel, cod_mod_ie, estado_evadiag FROM colegio";
+            $conexion = MySQLConnection::getInstance();
+            $sql = "SELECT codigo_local, nombre, nivel, cod_mod_ei, ugel, estado_evadiag FROM colegio";
             $params = '';
             $stmt = $conexion->query($sql, $params);
             $results = array();
-            while ($row = $stmt->fetchAll) {
+            while ($row = $stmt->fetchAll()) {
                 $results[] = $row;
             }
             $json = json_encode($results);

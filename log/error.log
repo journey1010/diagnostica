@@ -1,6 +1,5 @@
-2023-03-24 06:52:03 : Error : SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE loretosistemas_EvaDiag.colegioListaALL does not exist
-2023-04-10 01:20:01 : Error : SQLSTATE[28000] [1045] Access denied for user 'loretosistemas'@'localhost' (using password: YES)
-2023-04-10 01:20:05 : Error : SQLSTATE[28000] [1045] Access denied for user 'loretosistemas'@'localhost' (using password: YES)
-2023-04-10 01:20:08 : Error : SQLSTATE[28000] [1045] Access denied for user 'loretosistemas'@'localhost' (using password: YES)
-2023-04-10 01:20:09 : Error : SQLSTATE[28000] [1045] Access denied for user 'loretosistemas'@'localhost' (using password: YES)
-2023-04-10 01:20:10 : Error : SQLSTATE[28000] [1045] Access denied for user 'loretosistemas'@'localhost' (using password: YES)
+2023-04-12 07:03:06 : Error : Call to private MySQLConnection::__construct() from scope colegio
+2023-04-12 07:07:24 : Error : Call to private MySQLConnection::__construct() from scope colegio
+2023-04-12 07:08:25 : Error : Call to private MySQLConnection::__construct() from scope colegio
+2023-04-12 07:09:32 : Error : Call to private MySQLConnection::__construct() from scope colegio
+2023-04-12 07:09:34 : Error : Call to private MySQLConnection::__construct() from scope colegio

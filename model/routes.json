@@ -7,6 +7,6 @@
         {"method" : "GET", "pattern" : "/diagnostica/colegio-ugel/{colegio}/{ugel}", "handler" : "colegio@colegio"},
         {"method": "GET", "pattern" : "/diagnostica/distrito-list-per/{distrito}/{curso}/{nivel}", "handler" : "colegio@colegioListALL"},
         {"method": "GET", "pattern" : "/diagnostica/distrito-list/{distrito}", "handler" : "colegio@colegioList"},
-        {"method" : "GET", "pattern" : "/colegios/info", "handler" : "colegio@colegioDatos"}
+        {"method" : "GET", "pattern" : "/diagnostica/colegios/info", "handler" : "colegio@colegioDatos"}
     ]
 }
