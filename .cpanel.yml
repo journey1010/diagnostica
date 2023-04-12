@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/loretosistemas/public_html/apidiagnostica/
-    - /bin/rsync -av  ./ $DEPLOYPATH
+    - /bin/cp -av  ./ $DEPLOYPATH
