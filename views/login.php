@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel='icon' type='image/x-icon' href='<?php echo _RASSETS . 'images/gorel_favicon.png' ?>'>
+	<link rel='icon' type='image/x-icon' href='<?php echo _RASSETS . 'img/favicon.png' ?>'>
 	<link href="<?php echo _RASSETS . 'css/bootstrap.min.css' ?>" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 	<link href="<?php echo _RASSETS . 'css/app.css' ?>" rel="stylesheet">
