@@ -36,7 +36,6 @@ class colegio extends erroHandler_y_Sanitizevar{
             $results = array();
             while($row = $stmt->fetchAll()) {
                 $results[] = $row;
-                
             }
             $json = json_encode($results);
             print_r($json);
@@ -59,8 +58,7 @@ class colegio extends erroHandler_y_Sanitizevar{
             $stmt = $connection->query($sql, $params);
             $results = array();
             while($row = $stmt->fetchAll()) {
-                $results[] = $row;
-                
+                $results[] = $row;  
             }
             $json = json_encode($results);
             print_r($json);
@@ -77,7 +75,7 @@ class colegio extends erroHandler_y_Sanitizevar{
     {
         try{
             $conexion = MySQLConnection::getInstance();
-            $sql = "SELECT codigo_local, nombre, nivel, cod_mod_ei, ugel, estado_evadiag FROM colegio";
+            $sql = "SELECT codigo_local, nombre, nivel, cod_mod_ei, ugel FROM colegio";
             $params = '';
             $stmt = $conexion->query($sql, $params);
             $results = array();

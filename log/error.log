@@ -1,5 +1,0 @@
-2023-04-12 07:03:06 : Error : Call to private MySQLConnection::__construct() from scope colegio
-2023-04-12 07:07:24 : Error : Call to private MySQLConnection::__construct() from scope colegio
-2023-04-12 07:08:25 : Error : Call to private MySQLConnection::__construct() from scope colegio
-2023-04-12 07:09:32 : Error : Call to private MySQLConnection::__construct() from scope colegio
-2023-04-12 07:09:34 : Error : Call to private MySQLConnection::__construct() from scope colegio

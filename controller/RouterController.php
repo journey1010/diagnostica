@@ -57,7 +57,6 @@ class Router {
                 return;
             }
         }
-        
         die;
     }
 

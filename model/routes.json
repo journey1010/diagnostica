@@ -2,11 +2,22 @@
     "routes" : 
     [
         {"method" : "GET", "pattern" : "/diagnostica/distrito/{distrito}", "handler" : "ugel@ugelDistrito"},
+        {"method" : "GET", "pattern" : "/diagnostica/distrito/{distrito}", "handler" : "ugel@ugelDistrito"},
         {"method" : "GET", "pattern" : "/diagnostica/all/{ugel}" , "handler" : "ugel@ugelAllDistrict"},
         {"method" : "GET", "pattern" : "/diagnostica/ugel-all", "handler": "ugel@allUgel"},
         {"method" : "GET", "pattern" : "/diagnostica/colegio-ugel/{colegio}/{ugel}", "handler" : "colegio@colegio"},
         {"method": "GET", "pattern" : "/diagnostica/distrito-list-per/{distrito}/{curso}/{nivel}", "handler" : "colegio@colegioListALL"},
         {"method": "GET", "pattern" : "/diagnostica/distrito-list/{distrito}", "handler" : "colegio@colegioList"},
-        {"method" : "GET", "pattern" : "/diagnostica/colegios/info", "handler" : "colegio@colegioDatos"}
+        {"method" : "GET", "pattern" : "/diagnostica/colegios/info", "handler" : "colegio@colegioDatos"},
+        {"method" : "GET", "pattern" : "/administrador", "handler" : "LoginController@showLoginForm"},
+        {"method" : "POST", "pattern" : "/administrador/processlogin" , "handler": "LoginController@processLoginForm"},
+        {"method" : "GET", "pattern" : "/administrador/app", "handler": "AdminMainpage@show"},
+        {"method" : "GET", "pattern" : "/administrador/app/{contenidoPage}", "handler" : "AdminMainpage@showContentPage"},
+        {"method" : "GET", "pattern" : "/administrador/usuarios/{contenidoPage}", "handler" : "AdminMainpage@showContentPage"},
+        {"method" : "GET", "pattern" : "/administrador/director/{contenidoPage}", "handler" : "AdminMainpage@showContentPage"},
+        {"method" : "POST", "pattern" : "/changelogo", "handler" : "settingsUser@changeLogo" },
+        {"method" : "POST", "pattern" : "/changepassword", "handler" : "settingsUser@changePassword"},
+        {"method" : "POST", "pattern" : "/signout", "handler" : "settingsUser@signOut"},
+        {"method" : "POST", "pattern" : "/administrador/resgistrarusuarios", "handler": "admin/Usuarios@RegistrarUsuario"}
     ]
 }

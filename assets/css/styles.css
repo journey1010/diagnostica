@@ -1,0 +1,102 @@
+/*Configuración de OhSnap*/
+#ohsnap {
+  position: fixed;
+  bottom: 1px;
+  right: 5px;
+  margin-left: 5px;
+  z-index: 99;
+  padding-top: 4px;
+}
+
+.alert {
+  text-align: right;
+  margin-top: 2px;
+  padding: 15px;
+  border: 1px solid #eed3d7;
+  border-radius: 4px;
+  float: right;
+  clear: right;
+}
+
+.alert-red {
+  color: white;
+  background-color: #DA4453;
+}
+
+.alert-green {
+  color: white;
+  background-color: #37BC9B;
+}
+
+.alert-blue {
+  color: white;
+  background-color: #4A89DC;
+}
+
+.alert-yellow {
+  color: white;
+  background-color: #F6BB42;
+}
+
+.alert-orange {
+  color: white;
+  background-color: #E9573F;
+}
+
+/*Configuracion de imagen  bg de login*/
+.oscurecer-imagen {
+  filter: brightness(0.5);
+}
+
+.progress-bar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  z-index: 9999;
+  background-color: #ddd;
+  display: none;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: rgba(156, 9, 9, 0.765);
+  width: 0;
+  transition: width 0.3s ease-out;
+}
+
+.select2-selection{  
+  height: calc(2.25rem + 2px) !important
+} 
+
+table.table thead th {
+  white-space: nowrap;
+}
+table.table thead td {
+  vertical-align: middle;
+}
+
+.custom-file-input:lang(en)~.custom-file-label::after {
+  content: "Elegir archivo";
+}
+
+.custom-file-label {
+  height: calc(2.25rem + 2px);
+  overflow: hidden;
+}
+
+.custom-file-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: calc(2.25rem + 2px);
+  opacity: 0;
+  z-index: -1;
+}
+
+.archivo-elegido {
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+}
