@@ -18,6 +18,7 @@
         {"method" : "POST", "pattern" : "/changelogo", "handler" : "settingsUser@changeLogo" },
         {"method" : "POST", "pattern" : "/changepassword", "handler" : "settingsUser@changePassword"},
         {"method" : "POST", "pattern" : "/signout", "handler" : "settingsUser@signOut"},
-        {"method" : "POST", "pattern" : "/administrador/resgistrarusuarios", "handler": "admin/Usuarios@RegistrarUsuario"}
+        {"method" : "POST", "pattern" : "/administrador/resgistrarusuarios", "handler" : "admin/Usuarios@RegistrarUsuario"},
+        {"method" : "POST", "pattern" : "/administrador/registrarevadiag", "handler" : "admin/uploadfile@RegistrarEvadiag"}
     ]
 }

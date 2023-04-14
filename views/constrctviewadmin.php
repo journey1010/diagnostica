@@ -73,13 +73,13 @@ class viewConstruct{
                     '' => $contentPage->RegistrarUsuarios(),
                     'registrar-usuarios' => $contentPage->RegistrarUsuarios(),
                     // 'actualizar-usuarios' => $contentPage->ActualizarUsuarios(),
-                    // 'registrar-archivo' => $contentPage->RegistrarArchivo()
+                    'registrar-archivo' => $contentPage->RegistrarArchivo()
 
                 ],
                 
                 'director' =>[
                     '' => $contentPage->RegistrarArchivo(),
-                    // 'registrar-archivo' => $contentPage->RegistrarArchivo(),
+                    'registrar-archivo' => $contentPage->RegistrarArchivo(),
                     // 'contacto' => $contentPage->Contacto()
                 ]
             ];

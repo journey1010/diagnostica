@@ -6,3 +6,4 @@ define('_RVIEWS', _ROOT_PATH. '/views/', false);
 define('PROTOCOL', (isset($_SERVER["HTTPS"]) && $_SERVER["HTTPS"] === 'on' ? 'https' : 'http'), false);
 define('_BASE_URL', PROTOCOL . '://' . $_SERVER['HTTP_HOST'], false);
 define('_RASSETS', _BASE_URL.'/assets/', false);
+define('_RFILES', _ROOT_PATH . '/files/', false);

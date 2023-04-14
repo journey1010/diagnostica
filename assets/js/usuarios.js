@@ -7,6 +7,15 @@ function select2() {
   });
 }
 
+$(document).on('change', '#tipoUsuario', onSelectDirector);
+function onSelectDirector(){
+  if (this.value === 'director') {
+    $('#colegio').parent().parent().show();
+  } else {
+      $('#colegio').parent().parent().hide();
+  }
+}
+
 $(document).on("click", "#searchDNI", buscarDNI);
 function buscarDNI() {
   let dni = $("#dni").val();
@@ -60,7 +69,7 @@ function registrarUsuario(e) {
     $("#apellido_materno").val() === "" ||
     $("#contrasena").val() === "" ||
     $("#correo").val() === "" || 
-    $("#cod_mod_ie").val() === "" 
+    $("#colegio").val() === "" 
   ) {
     Toast.fire({
       background: "#E8EC14",
@@ -79,7 +88,7 @@ function registrarUsuario(e) {
       numero_telefono: $("#numero_telefono").val(),
       tipo_usuario: $("#tipoUsuario").val(),
       correo: $("#correo").val(),
-      cod_mod_ie : $("#cod_mod_ie").val()
+      colegio : $("#colegio").val()
     };
     $.ajax({
       method: "POST",

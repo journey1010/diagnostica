@@ -16,7 +16,7 @@ class Usuarios extends handleSanitize {
             $numero_telefono = $_POST['numero_telefono'];
             $tipo_usuario = $_POST['tipo_usuario'];
             $correo = $_POST['correo'];
-            $cod_mod_ie = $_POST['cod_mod_ie'];
+            $colegio = $_POST['colegio'];
             if (
                 !empty($dni) &&
                 !empty($nombre_usuario) &&
@@ -26,7 +26,7 @@ class Usuarios extends handleSanitize {
                 !empty($contrasena) &&
                 !empty($tipo_usuario) &&
                 !empty($correo) &&
-                !empty($cod_mod_ie)
+                !empty($colegio)
             ) {
                 $dni = $this->SanitizeVarInput($dni);
                 $nombre_usuario = $this->SanitizeVarInput($nombre_usuario);
@@ -37,7 +37,7 @@ class Usuarios extends handleSanitize {
                 $numero_telefono = $this->SanitizeVarInput($numero_telefono);
                 $tipo_usuario = $this->SanitizeVarInput($tipo_usuario);
                 $correo = $this->SanitizeVarInput($correo);
-                $cod_mod_ie = $this->SanitizeVarInput($cod_mod_ie);
+                $colegio = $this->SanitizeVarInput($colegio);
 
                 $conexion = MySQLConnection::getInstance();
                 $sqlSentence0 = 'SELECT usuario FROM directores WHERE usuario = ? OR dni = ?';
@@ -79,7 +79,7 @@ class Usuarios extends handleSanitize {
                     fecha_registro,
                     user_img,
                     correo,
-                    cod_mod_ie
+                    id_colegio
                 ) VALUES (
                     ?,?,?,?,?,?,?,?,?,?,?,?,?
                 )';
@@ -96,7 +96,7 @@ class Usuarios extends handleSanitize {
                     $fecha,
                     '',
                     $correo,
-                    $cod_mod_ie
+                    $colegio
                 ];
                 $conexion->query($sqlSentence, $params);
                 $conexion->close();
