@@ -88,6 +88,11 @@ class usuarios extends erroHandler_y_Sanitizevar{
         return $html;
     }
 
+    public function ActualizarUsuarios() 
+    {
+        
+    }
+
     private function colegios ()
     {
         try {

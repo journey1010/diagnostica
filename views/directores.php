@@ -15,51 +15,132 @@ class directores {
     public function RegistrarArchivo()
     {
         $ruta = $this->rutaAssets . 'js/director.js';
-
-        $fecha = date('Y');
-
+        $matematica = $this->matematica();
+        $lenguaje = $this->lenguaje();
         $html = <<<Html
         <div class="card card-warning mt-3 mx-auto w-100">
             <div class="card-header">
-                <h3 class="card-title">Registrar archivo de evaluación diagnostica</h3>
+                <h3 class="card-title">Registro de evaluación diagnostica</h3>
             </div>
-            <form id="registrarArchivo" enctype="multipart/form-data">
                 <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <label for="archivoEvadiag">Seleccione un archivo *</label>
-                            <div class="custom-file">
-                                <input type="file" class="custom-file-input" id="archivoEvadiag" onchange="
-                                    if (this.files.length > 0) {
-                                        document.querySelector('.custom-file-label').innerHTML = this.files[0].name
-                                    } else {
-                                            document.querySelector('.custom-file-label').innerHTML = 'Seleccione un archivo'
-                                    }
-                                ">
-                                <label class="custom-file-label" for="archivoEvadiag" data-browse="Elegir archivo">Elegir archivo</label>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="fechaSubida">Fecha *</label>
-                            <input type="text" class="form-control" id="fechaSubida" value="$fecha" disabled>
-                        </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label>Lenguaje *</label>
+                                <form id="lenguajeform">
+                                    $lenguaje
+                                    <button id="btn-lenguaje"type="submit" class="btn btn-primary">Guardar</button>
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                
+                            </div>
+                            <div class="col-md-12">
+                                <label>Matemática *</label>
+                                <form id="matematicaform">
+                                    $matematica
+                                    <button id="btn-matematica" type="submit" class="btn btn-primary">Guardar</button>
+                                </form>
+                            </div>
+                        </div>                    
                     </div>
                 </div>
-                <div class="card-footer mt-3">
-                    <div class="progress">
-                        <div class="progress-bar active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%; border-radius: 10px;">
-                            0%
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary mt-2">Guardar</button>
-                </div>
-        </form>
         </div>
         <script type ="module" src="$ruta" defer></script>
         Html;
         return $html;
     }
 
+    private function matematica () 
+    {
+        $tabla = <<<html
+        <div id="divmatematica" class="table-responsive">
+            <table id ="matematica" class="table sheet0 gridlines">
+            <thead>
+                <tr class="bg-secondary row0">
+                <th class="text-center column7 style6 s">COMPETENCIAS</th>
+                <th class="text-center column8 style2 s">P.I</th>
+                <th class="text-center column9 style2 s">I</th>
+                <th class="text-center column10 style3 s">P</th>
+                <th class="text-center column11 style4 s">S</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="row1">
+                <td class="column7 style1 s">Resuelve problemas de cantidad.</td>
+                <td><input type="text" class="column8 style5 null" required></td>
+                <td><input type="text" class="column9 style5 null" required></td>
+                <td><input type="text" class="column10 style5 null required"></td>
+                <td><input type="text" class="column11 style5 null required"></td>
+                </tr>
+                <tr class="row2">
+                <td class="column7 style1 s">Resuelve problemas de regularidad, equivalencia y cambio.</td>
+                <td><input type="text" class="column8 style5 null" required></td>
+                <td><input type="text" class="column9 style5 null" required></td>
+                <td><input type="text" class="column10 style5 null required"></td>
+                <td><input type="text" class="column11 style5 null required"></td>
+                </tr>
+                <tr class="row3">
+                <td class="column7 style1 s">Resuelve problemas de forma, movimiento y localizacion.</td>
+                <td><input type="text" class="column8 style5 null" required></td>
+                <td><input type="text" class="column9 style5 null" required></td>
+                <td><input type="text" class="column10 style5 null" required></td>
+                <td><input type="text" class="column11 style5 null" required></td>
+                </tr>
+                <tr class="row4">
+                <td class="column7 style1 s">Resuelve problemas de gestion de datos e incertidumbre.</td>
+                <td><input type="text" class="column8 style5 null" required></td>
+                <td><input type="text" class="column9 style5 null" required></td>
+                <td><input type="text" class="column10 style5 null" required></td>
+                <td><input type="text" class="column11 style5 null" required></td>
+                </tr>
+            </tbody>
+            </table>
+        </div>      
+        html;
+        return $tabla;
+    }
 
-
+    private function lenguaje () 
+    {
+        $tabla = <<<html
+        <div id="divlenguaje" class="table-responsive">
+            <table id ="lenguaje" class="table sheet0 gridlines">
+            <thead>
+                <tr class="bg-secondary row0">
+                <th class="column7 style6 s">COMPETENCIAS</th>
+                <th class="text-center column8 style2 s">P.I</th>
+                <th class="text-center column9 style2 s">I</th>
+                <th class="text-center column10 style3 s">P</th>
+                <th class="text-center column11 style4 s">S</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="row1">
+                <td class="column7 style1 s">Obtiene información del texto escrito.</td>
+                <td><input type="text" class="column8 style5 null" required></td>
+                <td><input type="text" class="column9 style5 null" required></td>
+                <td><input type="text" class="column10 style5 null required"></td>
+                <td><input type="text" class="column11 style5 null required"></td>
+                </tr>
+                <tr class="row2">
+                <td class="column7 style1 s">Infiere  e interpreta información del texto.</td>
+                <td><input type="text" class="column8 style5 null" required></td>
+                <td><input type="text" class="column9 style5 null" required></td>
+                <td><input type="text" class="column10 style5 null required"></td>
+                <td><input type="text" class="column11 style5 null required"></td>
+                </tr>
+                <tr class="row3">
+                <td class="column7 style1 s">Reflexiona y evalúa  la forma, el contennido y el contexto del texto.</td>
+                <td><input type="text" class="column8 style5 null" required></td>
+                <td><input type="text" class="column9 style5 null" required></td>
+                <td><input type="text" class="column10 style5 null required"></td>
+                <td><input type="text" class="column11 style5 null required"></td>
+                </tr>
+            </tbody>
+            </table>
+        </div>      
+        html;
+        return $tabla;
+    }
 }
