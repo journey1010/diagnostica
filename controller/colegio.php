@@ -75,9 +75,11 @@ class colegio extends erroHandler_y_Sanitizevar{
     {
         try{
             $conexion = MySQLConnection::getInstance();
-            $sql = "SELECT c.id_colegio, c.nombre, IFNULL('Eso tilin', 'No ha subido') AS 'Estado' FROM colegio c
+            $sql = "SELECT c.id_colegio, c.nombre, c.nivel, c.cod_mod_ei, IF(a.id IS NULL, 'No ha subido', 'Eso tilin') AS 'Estado'
+                    FROM colegio c
                     LEFT JOIN 
-                    (SELECT id_colegio, id FROM archivo WHERE anio = YEAR(CURDATE())) a  ON c.id_colegio = a.id_colegio;";
+                    (SELECT id_colegio, id FROM archivo WHERE anio = YEAR(CURDATE())) a 
+                    ON c.id_colegio = a.id_colegio; ";
             $params = '';
             $stmt = $conexion->query($sql, $params);
             $results = array();
