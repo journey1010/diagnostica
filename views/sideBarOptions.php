@@ -19,11 +19,11 @@ class sideBarOptions {
                 <p>Registrar</p>
                 </a>
             </li>
-            <li class="nav-item">
+            <!--    <li class="nav-item">
                 <a href="/administrador/usuarios/actualizar-usuarios" name="sidebarEnlace" class="nav-link" data-page="usuarios/actualizar-usuarios">
                 <i class="fas fa-edit"></i>
                 <p>Administrar usuarios</p>
-                </a>
+                </a> -->
             </li>
             </ul>
         </li>
