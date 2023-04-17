@@ -2,7 +2,6 @@
     "routes" : 
     [
         {"method" : "GET", "pattern" : "/diagnostica/distrito/{distrito}", "handler" : "ugel@ugelDistrito"},
-        {"method" : "GET", "pattern" : "/diagnostica/distrito/{distrito}", "handler" : "ugel@ugelDistrito"},
         {"method" : "GET", "pattern" : "/diagnostica/all/{ugel}" , "handler" : "ugel@ugelAllDistrict"},
         {"method" : "GET", "pattern" : "/diagnostica/ugel-all", "handler": "ugel@allUgel"},
         {"method" : "GET", "pattern" : "/diagnostica/colegio-ugel/{colegio}/{ugel}", "handler" : "colegio@colegio"},
