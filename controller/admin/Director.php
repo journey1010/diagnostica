@@ -105,11 +105,12 @@ class Director extends handleSanitize {
             if ($contadorRun == 4 ) {
                 $contadorRun = 0;
                 $competencia++;
+                $logros++;
             }
             
             $valores[] = "( ' " .   $this->idCompetenciaMaths[$competencia]  . " ', ' " . $puntuacion . " ', ' " . $logros . " ', ' " . $cl . " ' , '1' , ' " . $año . " ' )";
             $contadorRun++;
-            $logros++;
+            
         }    
         $sql .= implode(", ", $valores);
         $sql = rtrim($sql, ","); 
@@ -129,11 +130,12 @@ class Director extends handleSanitize {
             if ($contadorRun == 4 ) {
                 $contadorRun = 0;
                 $competencia++;
+                $logros++;
             }
             
             $valores[] = "( ' " .   $this->idCompetenciaLengua[$competencia]  . " ', ' " . $puntuacion . " ', ' " . $logros . " ', ' " . $cl . " ' , '2' , ' " . $año . " ' )";
             $contadorRun++;
-            $logros++;
+            
         }    
         $sql .= implode(", ", $valores);
         $sql = rtrim($sql, ","); 
