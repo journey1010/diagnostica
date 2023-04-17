@@ -105,12 +105,14 @@ class Director extends handleSanitize {
             if ($contadorRun == 4 ) {
                 $contadorRun = 0;
                 $competencia++;
-                $logros++;
             }
-            
+            if ($logros == 5 ) {
+                $logros= 1;
+            }
             $valores[] = "( ' " .   $this->idCompetenciaMaths[$competencia]  . " ', ' " . $puntuacion . " ', ' " . $logros . " ', ' " . $cl . " ' , '1' , ' " . $año . " ' )";
             $contadorRun++;
-            
+
+            $logros++;
         }    
         $sql .= implode(", ", $valores);
         $sql = rtrim($sql, ","); 
@@ -123,18 +125,21 @@ class Director extends handleSanitize {
         $competencia = 0;
         ##contadorRun contara el numero de recorridos asignar los id_logros al insert
         $contadorRun = 0;
-        $logros = 17;
+        $logros = 1;
         $valores = array ();
         $sql = "INSERT INTO resultado ( id_competencia, puntuacion, id_logro, id_colegio, id_curso, anio ) VALUES ";
         foreach ($datos as $puntuacion) {
             if ($contadorRun == 4 ) {
                 $contadorRun = 0;
                 $competencia++;
-                $logros++;
             }
-            
+            if ($logros == 5 ) {
+                $logros= 1;
+            }
             $valores[] = "( ' " .   $this->idCompetenciaLengua[$competencia]  . " ', ' " . $puntuacion . " ', ' " . $logros . " ', ' " . $cl . " ' , '2' , ' " . $año . " ' )";
             $contadorRun++;
+
+            $logros++;
             
         }    
         $sql .= implode(", ", $valores);
