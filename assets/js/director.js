@@ -11,34 +11,32 @@ $(document).on('submit', '#matematicaform', function(e) {
   e.preventDefault();
 
   let detener = false;
-  $('tr').each(function(){
-    var suma = 0;
-    $(this).find('input[type="text"]').each(function(){
-      var valor = parseInt($(this).val());
-      if (!isNaN(valor)) {
-        suma += valor;
-      }
-    });
-
-    if (suma !== 100) {
-      Toast.fire({
-        icon: "warning",
-        title: "Los valores de la fila "+$(this).index() + " son : " + suma+". Esta suma no debe ser inferior ni mayor a 100"
-      });
-      detener = true;
-      return false;
-    }
-  });
-
-  if (detener) {
-    return false;
-  }
-
   let datos = [];
   let inputs = $(this).find("input");
   inputs.each(function(index) {
     datos.push($(this).val());
   });
+
+  let suma = 0;
+  let fila = 1;
+  for (let i = 0; i < datos.length; i += 4) {
+    suma +=parseFloat(datos[i]) +parseFloat(datos[i+1]) +parseFloat(datos[i+2]) + parseFloat(datos[i+3]);
+    if (suma !== 100) {
+      Toast.fire({
+        icon: "warning",
+        title: "La suma del valor de los logros en la fila "+(fila)+" es incorrecto. ",
+      });
+      detener = true;
+      return false;
+    }
+    fila++;
+    suma = 0;
+  }
+
+  if (detener) {
+    return false;
+  }
+
 
   $.ajax({
     method: 'POST',
@@ -65,34 +63,31 @@ $(document).on('submit', '#lenguajeform', function(e) {
   e.preventDefault();
 
   let detener = false;
-  $('tr').each(function(){
-    var suma = 0;
-    $(this).find('input[type="text"]').each(function(){
-      var valor = parseInt($(this).val());
-      if (!isNaN(valor)) {
-        suma += valor;
-      }
-    });
-
-    if (suma !== 100) {
-      Toast.fire({
-        icon: "warning",
-        title: "Los valores de la fila "+$(this).index() + " son : " + suma+". Esta suma no debe ser inferior ni mayor a 100"
-      });
-      detener = true;
-      return false;
-    }
-  });
-
-  if (detener) {
-    return false;
-  }
-
   let datos = [];
   let inputs = $(this).find("input");
   inputs.each(function(index) {
     datos.push($(this).val());
   });
+
+  let suma = 0;
+  let fila = 1;
+  for (let i = 0; i < datos.length; i += 4) {
+    suma +=parseFloat(datos[i]) +parseFloat(datos[i+1]) +parseFloat(datos[i+2]) + parseFloat(datos[i+3]);
+    if (suma !== 100) {
+      Toast.fire({
+        icon: "warning",
+        title: "La suma del valor de los logros en la fila "+(fila)+" es incorrecto. ",
+      });
+      detener = true;
+      return false;
+    }
+    fila++;
+    suma = 0;
+  }
+
+  if (detener) {
+    return false;
+  }
 
   $.ajax({
     method: 'POST',
