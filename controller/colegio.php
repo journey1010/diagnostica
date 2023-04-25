@@ -96,4 +96,5 @@ class colegio extends erroHandler_y_Sanitizevar{
         }
         return; 
     }
+    
 }
