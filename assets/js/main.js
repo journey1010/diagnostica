@@ -23,8 +23,8 @@ $(document).ready(function () {
             <form id="upload-form" enctype="multipart/form-data">
               <input type="hidden" name="username" value="${username}" id="username">
               <div class="custom-file">
-                  <input type="file" class="custom-file-input" data-browser="Elegir" id="file" name="file">
-                  <label class="custom-file-label" for="customFile">Seleccione un archivo</label>
+                  <input type="file" class="custom-file-input"  id="file" name="file">
+                  <label class="custom-file-label" for="file" data-browser="Elegir">Seleccione un archivo</label>
               </div>
             </form>
           `,
