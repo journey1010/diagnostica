@@ -9,8 +9,8 @@
   <meta name="Admin GOREL" content="admin region loreto, admin gobierno regional de loreto, administrador gobierno regional de loreto"> 
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Administrador | Egovt</title>
-  <link rel='icon' type='image/x-icon' href = '<?php echo _RASSETS . 'img/favicon.png'?>'>
+  <title>Director - Evaluación Diagnóstica 2023</title>
+  <link rel='icon' type='image/x-icon' href = '<?php echo _RASSETS . 'img/logoGrel-green.png'?>'>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <link rel="stylesheet" href="<?php echo _RASSETS . 'css/all.min.css' ?> ">
   <link rel="stylesheet" href="<?php echo _RASSETS . 'css/adminlte.min.css' ?> ">
@@ -68,8 +68,9 @@
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
       <a href="http://evadiagnosticanm.loretosistemas.pe/" class="brand-link">
-        <img src="<?= _RASSETS . 'img/logo.jpg' ?>" alt="Admin Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">Administrador</span>
+        <img src="<?= _RASSETS . 'img/logoGrel-green.png
+' ?>" alt="Admin Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <span class="brand-text font-weight-light">Ir a Resultados</span>
       </a>
 
       <!-- Sidebar -->
@@ -123,7 +124,7 @@
     <!-- /.content-wrapper -->
     
     <footer class="main-footer">
-      <strong>Derechos reservados @ 2023 <a href="http://evadiagnosticanm.loretosistemas.pe/">Gobierno Regional de Loreto</a>.</strong>
+      <strong>Derechos reservados @ 2023 <a href="http://evadiagnosticanm.loretosistemas.pe/">Gobierno Regional de Educación de Loreto</a>.</strong>
     </footer>
   </div>
   <script src="<?= _RASSETS . 'js/ohsnap/ohsnap.js' ?>"></script>

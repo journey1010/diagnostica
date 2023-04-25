@@ -9,6 +9,24 @@ function select2() {
 
 $(document).on('submit', '#matematicaform', function(e) {
   e.preventDefault();
+
+  $('tr').each(function(){
+    var suma = 0;
+    $(this).find('input[type="text"]').each(function(){
+      var valor = parseInt($(this).val());
+      if (!isNaN(valor)) {
+        suma += valor;
+      }
+    });
+
+    if (suma !== 100) {
+      Toast.fire({
+        icon: "warning",
+        title: $(this).index() + " es: " + suma+".Esta suma no debe ser inferior ni mayor a 100"
+      });
+      return false;
+    }
+  });
   let datos = [];
   let inputs = $(this).find("input");
   inputs.each(function(index) {

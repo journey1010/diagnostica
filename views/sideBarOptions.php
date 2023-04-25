@@ -38,7 +38,7 @@ class sideBarOptions {
             <a href="#" class="nav-link">
             <i class="fas fa-hard-hat" style="color: #edf019;"></i>
             <p>
-                Registro
+                Subir Evaluación
                 <i class="right fas fa-angle-left"></i>
             </p>
             </a>
@@ -46,7 +46,7 @@ class sideBarOptions {
                 <li class="nav-item">
                     <a href="/administrador/director/registrar-archivo" name="sidebarEnlace" class="nav-link" data-page="director/registrar-archivo">
                     <i class="fas fa-book"></i>
-                    <p>Registrar</p>
+                    <p>Registrar mi EvaDiagnostica</p>
                     </a>
                 </li>
             </ul>

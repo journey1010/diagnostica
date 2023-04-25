@@ -10,7 +10,7 @@
 	<link href="<?php echo _RASSETS . 'css/app.css' ?>" rel="stylesheet">
 	<link href="<?php echo _RASSETS . 'css/icons.css' ?>" rel="stylesheet">
 	<link href="<?php echo _RASSETS . 'css/styles.css' ?>" rel="stylesheet">
-	<title>Administrador Egovt</title>
+	<title>Administrador Diagnostica</title>
 </head>
 
 <body>
@@ -49,7 +49,7 @@
 											</div>
 											<div class="col-12">
 												<div class="d-grid">
-													<button type="submit" class="btn btn-primary" id="submitButton"><i class='bx bx-user'></i>Ingresar</button>
+													<button type="submit" class="btn btn_print" id="submitButton"><i class='bx bx-user'></i>Ingresar</button>
 												</div>
 											</div>
 										</form>

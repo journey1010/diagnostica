@@ -18,6 +18,7 @@
         {"method" : "POST", "pattern" : "/changepassword", "handler" : "settingsUser@changePassword"},
         {"method" : "POST", "pattern" : "/signout", "handler" : "settingsUser@signOut"},
         {"method" : "POST", "pattern" : "/administrador/director/registrar-matematica", "handler" : "admin/Director@RegistrarMatematica"},
-        {"method" : "POST", "pattern" : "/administrador/director/registrar-lenguaje", "handler" : "admin/Director@RegistrarLenguaje"}
+        {"method" : "POST", "pattern" : "/administrador/director/registrar-lenguaje", "handler" : "admin/Director@RegistrarLenguaje"},
+        {"method" : "POST", "pattern" : "/administrador/resgistrarusuarios", "handler" : "admin/Usuarios@RegistrarUsuario"}
     ]
 }

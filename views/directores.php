@@ -19,8 +19,8 @@ class directores {
         $lenguaje = $this->lenguaje();
         $html = <<<Html
         <div class="card card-warning mt-3 mx-auto w-100">
-            <div class="card-header">
-                <h3 class="card-title">Registro de evaluación diagnostica</h3>
+            <div class="card-header titulo_warning">
+                <h3 class="card-title">Registro de Evaluación Diagnostica</h3>
             </div>
                 <div class="card-body">
                     <div class="container">
@@ -29,7 +29,7 @@ class directores {
                                 <label>Lenguaje *</label>
                                 <form id="lenguajeform">
                                     $lenguaje
-                                    <button id="btn-lenguaje"type="submit" class="btn btn-primary">Guardar</button>
+                                    <button id="btn-lenguaje"type="submit" class="btn btn_print">Guardar</button>
                                 </form>
                             </div>
                             <div class="card-footer">
@@ -39,7 +39,7 @@ class directores {
                                 <label>Matemática *</label>
                                 <form id="matematicaform">
                                     $matematica
-                                    <button id="btn-matematica" type="submit" class="btn btn-primary">Guardar</button>
+                                    <button id="btn-matematica" type="submit" class="btn btn_print">Guardar</button>
                                 </form>
                             </div>
                         </div>                    
@@ -55,14 +55,14 @@ class directores {
     {
         $tabla = <<<html
         <div id="divmatematica" class="table-responsive">
-            <table id ="matematica" class="table sheet0 gridlines">
+            <table id ="matematica" class="table sheet0 gridlines text-center">
             <thead>
                 <tr class="bg-secondary row0">
-                <th class="text-center column7 style6 s">COMPETENCIAS</th>
-                <th class="text-center column8 style2 s">P.I</th>
-                <th class="text-center column9 style2 s">I</th>
-                <th class="text-center column10 style3 s">P</th>
-                <th class="text-center column11 style4 s">S</th>
+                <th class="text-center column7 style6 competencias">COMPETENCIAS</th>
+                <th class="text-center column8 previo_inicio">Previo Inicio</th>
+                <th class="text-center column9 inicio">Inicio</th>
+                <th class="text-center column10 proceso">Proceso</th>
+                <th class="text-center column11 style4 satisfactorio">Satisfactorio</th>
                 </tr>
             </thead>
             <tbody>
@@ -108,11 +108,11 @@ class directores {
             <table id ="lenguaje" class="table sheet0 gridlines">
             <thead>
                 <tr class="bg-secondary row0">
-                <th class="column7 style6 s">COMPETENCIAS</th>
-                <th class="text-center column8 style2 s">P.I</th>
-                <th class="text-center column9 style2 s">I</th>
-                <th class="text-center column10 style3 s">P</th>
-                <th class="text-center column11 style4 s">S</th>
+                <th class="text-center column7 style6 competencias">COMPETENCIAS</th>
+                <th class="text-center column8 previo_inicio">Previo Inicio</th>
+                <th class="text-center column9 inicio">Inicio</th>
+                <th class="text-center column10 proceso">Proceso</th>
+                <th class="text-center column11 style4 satisfactorio">Satisfactorio</th>
                 </tr>
             </thead>
             <tbody>

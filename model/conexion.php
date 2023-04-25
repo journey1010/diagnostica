@@ -9,6 +9,14 @@ class MySQLConnection {
     private $pdo;
     private static $instance;
     
+    // private function __construct() {
+    //     $this->host = 'localhost' ; 
+    //     $this->port = '3306';
+    //     $this->username= 'loretosistemas';
+    //     $this->password='Xblg6h0W6e78';
+    //     $this->db='loretosistemas_EvaDiag';
+    // }
+
     private function __construct() {
         $this->host = 'localhost' ; 
         $this->port = '3306';

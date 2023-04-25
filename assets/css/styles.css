@@ -1,4 +1,6 @@
 /*Configuración de OhSnap*/
+
+
 #ohsnap {
   position: fixed;
   bottom: 1px;
@@ -70,12 +72,54 @@
   height: calc(2.25rem + 2px) !important
 } 
 
+.titulo_warning{
+    background-color: #2B886D!important;
+    color:#E8E8E8 !important; ;
+}
+
+.btn_print {
+  display: inline-block;
+  border: 1px solid #ffffff;
+  background: #27ae60;
+  color: #ffffff !important;
+  margin-left: 7px;
+  padding: 8px 15px 8px 15px;
+  font-weight: normal;
+  transition: all .2s ease-in-out;
+  }
+
 table.table thead th {
   white-space: nowrap;
 }
 table.table thead td {
   vertical-align: middle;
 }
+
+table .previo_inicio{
+  background-color: #b31919 !important;
+  color: #E8E8E8 !important;
+}
+
+table .competencias{
+  background-color: #2B886D !important;
+  color: #E8E8E8 !important;
+}
+
+table .inicio{
+  background-color: #EC1F28 !important;
+  color: #E8E8E8 !important;
+}
+
+table .proceso{
+  background-color: #fcb827 !important;
+  color: white !important;
+}
+
+.table .satisfactorio{
+  background-color: #309F52 !important;
+  color: #E8E8E8 !important;
+}
+
 
 .custom-file-input:lang(en)~.custom-file-label::after {
   content: "Elegir archivo";
